@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+  --green: hsl(120, 72.8%, 63.9%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  display: grid;
+  place-items: center;
+}
+main {
+  background: url('../images/background.svg') no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+.container {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--grey);
+}
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25em;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  margin-top: 2rem;
+}
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+/*Efeitos Hover*/
+.github:hover {
+  color: var(--green);
+  transition: color 0.5s;
+}
+#userBio:hover {
+  color: var(--green);
+  transition: color 0.5s;
+  cursor: default;
+}
+
+/* estilos versão tablet */
+@media (min-width: 720px) {
+  body {
+    background: var(--black);
+  }
+  main {
+    background: url('../images/backgroundDesktop.svg') center/cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .avatar {
+    margin: 13.5rem auto 0;
+  }
+  ul {
+    margin-top: 3rem;
+  }
+}
+
+/* estilos versão desktop */
+@media (min-width: 960px) {
+  body {
+    background: var(--black);
+  }
+  main {
+    background: url('../images/backgroundDesktop.svg') center/cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  .avatar {
+    margin: 13.5rem auto 0;
+  }
+  ul {
+    margin-top: 3rem;
+  }
+}
